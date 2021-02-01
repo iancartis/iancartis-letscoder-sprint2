@@ -42,7 +42,8 @@ main {
     padding: 1%;
     position: fixed;
     background-color: 100vh;
-    background: #ce403b;
+    /* background: #ce403b; */
+    background: red;
     z-index: 10;
     top: 0;
     display: flex;
