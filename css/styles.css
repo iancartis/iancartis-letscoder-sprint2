@@ -42,8 +42,7 @@ main {
     padding: 1%;
     position: fixed;
     background-color: 100vh;
-    /* background: #ce403b; */
-    background: red;
+    background: #ce403b;
     z-index: 10;
     top: 0;
     display: flex;
