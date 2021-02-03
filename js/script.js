@@ -4,7 +4,7 @@ const secondaryMenu = document.querySelector(".secondary");
 const close = document.querySelector(".secondary img");
 let circle = document.createElement('div');
 let className = "circle";
-let className2 = "html";
+
 
 
 console.log(burguer);

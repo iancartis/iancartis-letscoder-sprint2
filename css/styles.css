@@ -280,7 +280,7 @@ body.dark .main-nav {}
     position: absolute;
     clip-path: circle();
     z-index: 0;
-    animation: translate 20s infinite;
+    animation: translate 20s;
 }
 
 .circle1 {
@@ -605,7 +605,7 @@ button:hover {
     height: 100px;
     z-index: 1;
     background-size: contain;
-    animation: translate 20s infinite;
+    animation: translate 20s;
     position: absolute;
 }
 
@@ -676,10 +676,12 @@ footer ul li img {
     0% {
         transform: translateX(0%);
         transform: translateY(0%);
+        opactiy: 1;
     }
     100% {
         transform: translateX(var(--translate-x));
         transform: translateY(var(--translate-y));
+        opacity: 0;
     }
 }
 
@@ -696,7 +698,7 @@ footer ul li img {
     }
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 780px) {
     header a {
         position: absolute;
         left: 0;
