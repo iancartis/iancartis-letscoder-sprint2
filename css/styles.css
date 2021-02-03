@@ -347,6 +347,14 @@ body.dark .team {
     overflow: hidden;
 }
 
+.cursos {
+    height: auto;
+    top: 0px;
+    position: relative;
+    transition: 0.2s;
+    overflow: hidden;
+}
+
 
 /* .fechas::after {
     content: '';
@@ -401,6 +409,10 @@ tr {
 
 tr:last-of-type {
     border-bottom: none;
+}
+
+thead {
+    width: 100%;
 }
 
 td {
