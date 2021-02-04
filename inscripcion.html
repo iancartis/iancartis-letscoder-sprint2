@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="main-nav">
+        <div class="nav-burguer">
+            <div class="top"></div>
+            <div class="middle"></div>
+            <div class="bottom"></div>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="conocenos.html">Conócenos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="inscripcion.html">Inscripcion</a></li>
+        </ul>
+        <div class="toggler">
+
+            <div class="on-off"></div>
+        </div>
+    </nav>
+    <nav class="secondary">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="conocenos.html">Conócenos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="inscripcion.html">Inscripcion</a></li>
+        </ul>
+        <img src="images/close.png" alt="">
+
+    </nav>
+    <header>
+        <a href="index.html"><img src="images/letscoder-square.jpeg" alt="" class="logo"></a>
+        <h1>Let's Coder</h1>
+    </header>
+    <section class="flex column align-center inscripcion ">
+        <div class="">
+
+            <form action="post" class="inscripcion-curso" name="myForm">
+                <h2>Formulario de inscripción Let's Coder</h2>
+                <div class="nombre-apellidos">
+                    <label for="name">Nombre </label><input type="text" id="name" name="name" required="true">
+                    <label for="name">Apellidos </label><input type="text" id="apellidos" name="apellidos" required="true">
+                </div>
+                <div class="email">
+
+                    <label for="email">E-mail</label><input type="text" id="email" name="email">
+                </div>
+                <div class="fecha-form">
+                    <label for="fecha-nacimiento">Fecha de nacimiento</label><input type="date" name="fecha-nacimiento" id="fecha-nacimiento">
+                </div>
+                <div class="provincia">
+                    <label for="provincia">Provincia</label>
+                    <input type="text" name="provincia" id="provincia">
+                </div>
+
+                <div class="poblacion">
+                    <label for="poblacion">Población</label>
+                    <input type="text" name="poblacion" id="name">
+                </div>
+                <div class="curso-interes">
+                    <h3>Selecciona el curso que te interesa</h3>
+                    <div class="full-time">
+                        <input type="radio" id="full-time" name="full-time" value="full-time">
+                        <label for="full-time">Full Time</label>
+                    </div>
+                    <div class="part-time">
+                        <input type="radio" id="part-time" name="part-time" value="part-time" checked>
+                        <label for="part-time">Part-Time</label>
+                    </div>
+                </div>
+
+                <div class="tecnologias">
+                    <h3 for="tecnologias">Tecnologías previamente vistas</h3>
+                    <div class="html_">
+                        <input type="checkbox" name="html" id="html">
+                        <label for="html">HTML</label>
+                    </div>
+                    <div class="css">
+                        <input type="checkbox" name="css" id="css">
+                        <label for="html">CSS</label>
+                    </div>
+                    <div class="git">
+                        <input type="checkbox" name="git" id="git">
+                        <label for="html">GIT</label>
+                    </div>
+                </div>
+                <div class="comentarios">
+                    <label for="comentarios">Comentarios</label><input type="textarea" id="comentarios" name="comentarios">
+
+                </div>
+
+
+                <input type="button" value="Enviar solicitud" id="enviar">
+
+            </form>
+        </div>
+
+    </section>
+    <footer>
+        <img src="images/logo-footer.png" alt="">
+
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/letscoder/" target="_blank"><img src="images/facebook.png" alt=""></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/lets_coder" target="_blank"><img src="images/insta.png" alt=""></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/search?q=letscoder&src=typed_query" target="_blank"><img src="images/twitter.png" alt=""></a>
+            </li>
+        </ul>
+    </footer>
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

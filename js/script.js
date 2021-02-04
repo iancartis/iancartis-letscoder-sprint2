@@ -62,3 +62,24 @@ function togglerSlider() {
     });
 }
 togglerSlider();
+const sendButton = document.getElementById('enviar');
+const form = document.querySelector('form');
+// let elements = form.elements;
+// var elemsArr1 = Array.from(elements);
+const data = new URLSearchParams(new FormData(form));
+
+
+
+function getData() {
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        for (var [key, value] of data) {
+            console.log(value);
+        }
+
+    });
+
+}
+getData();
