@@ -7,6 +7,7 @@
     --secondary-blue: #6059e6;
     --yellow: rgba(206, 200, 20);
     --pink: rgba(233, 37, 210);
+    --red: #ce403b;
 }
 
 
@@ -42,7 +43,7 @@ main {
     padding: 1%;
     position: fixed;
     background-color: 100vh;
-    background: #ce403b;
+    background: var(--red);
     z-index: 10;
     top: 0;
     display: flex;
@@ -71,7 +72,7 @@ main {
 .secondary {
     display: flex;
     position: absolute;
-    background-color: #ce403b;
+    background-color: var(--red);
     width: 100vw;
     height: 100vh;
     z-index: 4;
@@ -280,7 +281,7 @@ body.dark .main-nav {}
     position: absolute;
     clip-path: circle();
     z-index: 0;
-    animation: translate 20s infinite;
+    animation: translate 20s;
 }
 
 .circle1 {
@@ -343,6 +344,11 @@ body.dark .team {
     background: black;
 }
 
+body.dark .inscripcion {
+    background-color: black;
+    color: white;
+}
+
 
 /*Table*/
 
@@ -369,14 +375,17 @@ body.dark .team {
     transition: 0.2s;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
     margin: 0 auto;
     padding: 0 0 100px;
 }
 
-.lista ol {
+.lista .container {
     line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    margin: 0 100px;
 }
 
 .lista ol li ul li {
@@ -468,7 +477,7 @@ tr th {
     height: 100px;
 }
 
-button {
+.fechas a {
     cursor: pointer;
     background-color: var(--main-blue);
     color: white;
@@ -479,9 +488,11 @@ button {
     height: 40px;
     width: calc(100% - 50px);
     text-transform: uppercase;
+    text-align: center;
+    padding-top: 10px;
 }
 
-button:hover {
+.fechas a:hover {
     background-color: var(--secondary-blue);
     transform: scale(1.1);
 }
@@ -534,6 +545,217 @@ button:hover {
 .container {
     display: flex;
     flex-direction: row;
+}
+
+
+/*Inscripcion*/
+
+.inscripcion {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color: var(--red);
+}
+
+.inscripcion-curso {
+    display: flex;
+    flex-direction: column;
+}
+
+.inscripcion-curso>input,
+.inscripcion-curso>div {
+    margin: 20px 0;
+}
+
+input {
+    border: none;
+    display: inline;
+    border-radius: 10px;
+    height: 25px;
+    box-shadow: 5px 4px 17px darkred;
+    position: relative
+}
+
+input:required {
+    border: 2px solid red;
+}
+
+input:focus {
+    outline: none;
+    background-color: #4c44e680;
+}
+
+input:required:after {
+    content: '*';
+    width: 10px;
+    height: 10px;
+}
+
+input[type=date] {
+    font-family: 'Roboto';
+    padding: 0 0 0 10px;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    box-shadow: none;
+}
+
+label {
+    display: inline;
+    font-size: 20px;
+}
+
+
+/*Nombre Apellidos*/
+
+.nombre-apellidos {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*Fecha*/
+
+.fecha-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fecha-form>label {
+    width: 250px;
+    margin-right: 10px;
+}
+
+.fecha-form>input {
+    width: 65%;
+}
+
+
+/*Email*/
+
+.email {
+    display: flex;
+}
+
+.email>label {
+    width: auto;
+    margin-right: 10px;
+}
+
+.email>input {
+    width: 87%;
+}
+
+
+/*Provincia*/
+
+.provincia {
+    display: flex;
+}
+
+.provincia>label {
+    width: auto;
+    margin-right: 10px;
+}
+
+.provincia>input {
+    width: 83%;
+}
+
+
+/*Curso interés*/
+
+.curso-interes {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-time,
+.part-time {
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.curso-interes label {
+    width: 200px;
+}
+
+.curso-interes input {
+    width: auto;
+    margin-right: 10px;
+}
+
+
+/*Población*/
+
+.poblacion {
+    display: flex;
+    flex-direction: row;
+}
+
+.poblacion label {
+    width: auto;
+    margin-right: 10px;
+}
+
+.poblacion input {
+    width: 83%;
+}
+
+
+/*Tecnologías*/
+
+.tecnologias {
+    display: flex;
+    flex-direction: column;
+}
+
+.tecnologias label {
+    margin-left: 10px;
+}
+
+.tecnologias checkbox {
+    border: none;
+    appearance: none;
+}
+
+.html_,
+.css,
+.git {
+    display: flex;
+}
+
+#enviar {
+    height: 50px;
+    background-color: var(--main-blue);
+    transition: 0.2s
+}
+
+#enviar:hover {
+    background-color: var(--secondary-blue);
+}
+
+
+/*Comentarios*/
+
+.comentarios {
+    display: flex;
+    flex-direction: column;
+}
+
+.comentarios label {
+    margin-bottom: 10px;
+    ;
+}
+
+.comentarios input {
+    width: 100%;
+    height: 200px;
 }
 
 
@@ -605,7 +827,7 @@ button:hover {
     height: 100px;
     z-index: 1;
     background-size: contain;
-    animation: translate 20s infinite;
+    animation: translate 20s;
     position: absolute;
 }
 
@@ -616,7 +838,7 @@ footer {
     width: 100%;
     height: 300px;
     margin: 0 auto;
-    background: #ce403b;
+    background: var(--red);
     padding: 50px 0 0 0;
     display: flex;
     flex-direction: column;
@@ -676,17 +898,21 @@ footer ul li img {
     0% {
         transform: translateX(0%);
         transform: translateY(0%);
+        opactiy: 1;
     }
     100% {
         transform: translateX(var(--translate-x));
         transform: translateY(var(--translate-y));
+        opacity: 0;
     }
 }
 
 
 /*Media Queries*/
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) {}
+
+@media screen and (max-width: 957px) {
     .team .column {
         width: 100%;
         margin: 0 0 150px;
@@ -694,9 +920,6 @@ footer ul li img {
     table {
         width: 80vw;
     }
-}
-
-@media screen and (max-width: 670px) {
     header a {
         position: absolute;
         left: 0;
